@@ -19,7 +19,7 @@ if [[ $ok -eq 0 ]]
 
         sed -i.bak 's/#.*$//g' $fin
         sed -i.bak 's/:.*//g' $fin
-        # sed -i.bak 's/,/\'$'\n/g' $fin
+        sed -i.bak $'/[^ \t]/,$p' $fin
 
         # cleanup
         rm -fr ./*.bak
