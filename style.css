@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { font: 18px/24px sans-serif; }
+
+.mobile { display: none; }
+
+.container {
+    background: url("img/maze-map.png?v=20180420") no-repeat #ccff99;
+    height: 775px;
+    margin: 0;
+    width: 775px;
+}
+
+.field {
+    position: absolute;
+}
+
+.object {
+    display: inline-block;
+    float: left;
+    position: absolute;
+}
+
+#pointer {
+    background-color: orange;
+    height: 25px;
+    left: 375px;
+    top: 0;
+    width: 25px;
+}
+
+@media (max-width:768px) {
+    .container { display: none; }
+    .mobile {
+        background-color: #ccff99;
+        color: #000;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        margin: 15px;
+        text-align: center;
+    }
+}

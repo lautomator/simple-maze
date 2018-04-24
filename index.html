@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Use the arrow keys get through the maze.">
+    <meta name="author" content="https://github.com/lautomator">
+    <title>Simple Maze</title>
+    <!-- <link rel="icon" type="image/png" href="img/favicon.png?v=20180418"> -->
+</head>
+<body>
+    <div class="mobile"><p>This game is for desktop only.</p></div>
+    <div class="container">
+        <div class="field">
+            <div class="object" id="pointer">&nbsp;</div>
+        </div>
+    </div><!-- /container -->
+
+    <script>
+        var data = {
+            targets: {
+                head: document.getElementsByTagName("head"),
+                body: document.getElementsByTagName("body"),
+                pointer: document.getElementById("pointer")
+            },
+            scriptName: "main.js",
+            styleName: "style.css",
+            v: Math.random(0, 1000) * 1000,
+            style: document.createElement("link"),
+            script: document.createElement("script")
+        };
+
+        // enqueue the main script
+        data.script.src = data.scriptName + "?v=" + data.v.toString().replace(".", "");
+        data.targets.body[0].appendChild(data.script);
+
+        // enqueue the style sheet
+        data.style.href = data.styleName + "?v=" + data.v.toString().replace(".", "");
+        data.style.rel = "stylesheet";
+        data.style.type = "text/css";
+        data.targets.head[0].appendChild(data.style);
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+1. The map should be a transparent png with only 1 color.
+
+2. Use this command to get the coordinates: convert [nameofimage].png [nameofimage]-map.txt
+
+3. Use this script to remove everything but the coordinates: convert_map.sh
+
+4. Since the game uses movements in increments of 25, run this python script to get the coordinates to adhere to the increments you are using: map_coords.py
