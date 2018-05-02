@@ -1,11 +1,11 @@
-Using Imagemagik to get the map coordinates
+Using ImageMagick to get the map coordinates
 ===========================================
 
-Requirements: get [Imagemagik](https://www.imagemagick.org/script/index.php).
+Requirements: get [ImageMagick](https://www.imagemagick.org/script/index.php).
 
-1. The image (map) should be a *transparent or white background png file* with only *1 color*. The one color should be the solid parts of the map (walls) and it should be black.
+1. The image (map) should be a **transparent or white background png file** with only **1 color**. The one color should be the solid parts of the map (walls) and it should be black.
 
-2. Convert the map to text information. This will give you every coordinate of every pixel and color information. Use this command to get the coordinates: `convert [nameofimage].png [nameofimage]-map.txt`
+2. Convert the map to text information using ImageMagick. This will give you every coordinate of every pixel and color information. Use this command to get the coordinates: `convert [nameofimage].png [nameofimage]-map.txt`
 
 3. Since you do not need the background information, use this script to get the coordinates of the black lines only: `get_walls.py`
 
